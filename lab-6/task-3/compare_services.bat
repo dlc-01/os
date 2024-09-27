@@ -1,0 +1,1 @@
+fc services_list_before.txt services_list_after.txt > services_diff.txt

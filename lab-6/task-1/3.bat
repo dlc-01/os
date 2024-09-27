@@ -1,0 +1,1 @@
+type *.txt > all_info.txt
