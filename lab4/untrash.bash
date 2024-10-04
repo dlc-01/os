@@ -25,9 +25,7 @@ grep " $FILE_TO_RESTORE" "$LOG_FILE" | while read -r line; do
 
         rm "$TRASH_DIR/$LINK_NAME"
         sed -i "\|$line|d" "$LOG_FILE"
-        echo "$FILE_TO_RESTORE restored."
         exit 0
     fi
 done
 
-echo "File is not in trash."

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RESTORE_DIR="$HOME/restore"
-LATEST_BACKUP=$(ls -dt "$HOME"/Backup-* 2>/dev/null | head -n 1)
+LATEST_BACKUP=$(ls -dt "$HOME"/Backup-* | head -n 1)
 
 if [ -z "$LATEST_BACKUP" ]; then
     exit 1

@@ -20,12 +20,14 @@ fi
 LINK_NAME=$(ls "$TRASH_DIR" | wc -l)
 
 
+REAL_PATH=$(realpath "$FILE_TO_REMOVE")
+
 ln "$FILE_TO_REMOVE" "$TRASH_DIR/$LINK_NAME"
 
 
 rm "$FILE_TO_REMOVE"
 
 
-echo "$(realpath "$FILE_TO_REMOVE") $LINK_NAME" >> "$LOG_FILE"
+echo "$REAL_PATH $LINK_NAME" >> "$LOG_FILE"
 
 

@@ -5,7 +5,7 @@ BACKUP_DIR="$HOME/Backup-$(date +%Y-%m-%d)"
 LOG_FILE="$HOME/backup-report"
 DAYS_LIMIT=7
 
-LATEST_BACKUP=$(ls -dt "$HOME"/Backup-* 2>/dev/null | head -n 1)
+LATEST_BACKUP=$(ls -dt "$HOME"/Backup-* | head -n 1)
 
 if [ -n "$LATEST_BACKUP" ] && [ $(($(date +%s) - $(date +%s -r "$LATEST_BACKUP"))) -lt $((DAYS_LIMIT * 86400)) ]; then
     BACKUP_DIR="$LATEST_BACKUP"
