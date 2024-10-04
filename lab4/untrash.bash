@@ -7,7 +7,7 @@ LOG_FILE="$HOME/.trash.log"
 FILE_TO_RESTORE="$1"
 
 
-grep " $FILE_TO_RESTORE" "$LOG_FILE" | while read -r line; do
+grep "$FILE_TO_RESTORE" "$LOG_FILE" | while read -r line; do
     ORIGINAL_PATH=$(echo "$line" | cut -d ' ' -f1)
     LINK_NAME=$(echo "$line" | cut -d ' ' -f2)
 
